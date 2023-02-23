@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+    <head>
+        <title>USI SA1 &bull; AI</title>
+      <meta name="author" content="Agnese E. Zamboni">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="../../public/favicon.svg">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+      <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="../../stylesheets/globals.css">
+    </head>
+
+    <body class="overflow-x-hidden scrollbar">
+
+  <!--Nav. Bar-->
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid justify-content-between mx-3">
+        <a class="navbar-brand" href="../../index.html">
+          <svg width="140" viewBox="0 0 168 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M67.9163 13.1818H70.8378V22.1555C70.8378 23.1631 70.5972 24.0447 70.1159 24.8004C69.6391 25.5561 68.9711 26.1454 68.112 26.5682C67.2529 26.9865 66.252 27.1957 65.1095 27.1957C63.9625 27.1957 62.9594 26.9865 62.1003 26.5682C61.2411 26.1454 60.5732 25.5561 60.0964 24.8004C59.6196 24.0447 59.3812 23.1631 59.3812 22.1555V13.1818H62.3027V21.9059C62.3027 22.4322 62.4174 22.9 62.6468 23.3093C62.8807 23.7186 63.2091 24.0402 63.6319 24.2741C64.0547 24.508 64.5472 24.625 65.1095 24.625C65.6763 24.625 66.1688 24.508 66.5871 24.2741C67.01 24.0402 67.3361 23.7186 67.5655 23.3093C67.7994 22.9 67.9163 22.4322 67.9163 21.9059V13.1818ZM80.7376 17.1559C80.6836 16.6116 80.452 16.1888 80.0427 15.8874C79.6333 15.5861 79.0778 15.4354 78.3761 15.4354C77.8993 15.4354 77.4967 15.5028 77.1684 15.6378C76.84 15.7682 76.5881 15.9504 76.4127 16.1843C76.2418 16.4182 76.1563 16.6836 76.1563 16.9805C76.1473 17.2279 76.199 17.4438 76.3115 17.6282C76.4284 17.8126 76.5881 17.9723 76.7905 18.1072C76.9929 18.2377 77.2268 18.3524 77.4922 18.4513C77.7576 18.5458 78.041 18.6268 78.3424 18.6942L79.5839 18.9911C80.1866 19.1261 80.7399 19.306 81.2437 19.5309C81.7474 19.7558 82.1838 20.0324 82.5526 20.3608C82.9214 20.6892 83.2071 21.076 83.4095 21.5213C83.6164 21.9666 83.7221 22.4772 83.7266 23.0529C83.7221 23.8986 83.5062 24.6317 83.0789 25.2525C82.6561 25.8687 82.0443 26.3478 81.2437 26.6896C80.4475 27.027 79.4871 27.1957 78.3626 27.1957C77.2471 27.1957 76.2755 27.0247 75.4478 26.6829C74.6247 26.341 73.9815 25.835 73.5182 25.1648C73.0593 24.4901 72.8187 23.6557 72.7962 22.6616H75.6233C75.6548 23.1249 75.7874 23.5117 76.0214 23.8221C76.2598 24.128 76.5769 24.3596 76.9727 24.517C77.373 24.67 77.8251 24.7464 78.3289 24.7464C78.8237 24.7464 79.2532 24.6745 79.6176 24.5305C79.9864 24.3866 80.2721 24.1864 80.4745 23.93C80.6769 23.6737 80.7781 23.379 80.7781 23.0462C80.7781 22.7358 80.6859 22.4749 80.5015 22.2635C80.3215 22.0521 80.0562 21.8722 79.7053 21.7237C79.3589 21.5753 78.9339 21.4403 78.4301 21.3189L76.9255 20.9411C75.7605 20.6577 74.8406 20.2146 74.1659 19.6119C73.4912 19.0091 73.1561 18.1972 73.1606 17.1761C73.1561 16.3395 73.3787 15.6085 73.8285 14.9833C74.2828 14.3581 74.9058 13.87 75.6975 13.5192C76.4892 13.1683 77.3888 12.9929 78.3964 12.9929C79.4219 12.9929 80.317 13.1683 81.0817 13.5192C81.8509 13.87 82.4491 14.3581 82.8765 14.9833C83.3038 15.6085 83.5242 16.3327 83.5377 17.1559H80.7376ZM88.6132 13.1818V27H85.6917V13.1818H88.6132ZM104.577 17.6484C104.483 17.3201 104.35 17.0299 104.179 16.7781C104.008 16.5217 103.799 16.3058 103.551 16.1303C103.309 15.9504 103.03 15.8132 102.715 15.7188C102.404 15.6243 102.06 15.5771 101.682 15.5771C100.976 15.5771 100.356 15.7525 99.8203 16.1033C99.2895 16.4542 98.8757 16.9647 98.5788 17.6349C98.2819 18.3007 98.1335 19.1148 98.1335 20.0774C98.1335 21.04 98.2797 21.8587 98.572 22.5334C98.8644 23.2081 99.2782 23.7231 99.8135 24.0785C100.349 24.4293 100.981 24.6048 101.709 24.6048C102.371 24.6048 102.935 24.4878 103.403 24.2539C103.875 24.0155 104.235 23.6804 104.483 23.2486C104.734 22.8168 104.86 22.3062 104.86 21.717L105.454 21.8047H101.892V19.6051H107.674V21.3459C107.674 22.5604 107.418 23.6039 106.905 24.4766C106.392 25.3447 105.686 26.0149 104.786 26.4872C103.887 26.955 102.856 27.1889 101.696 27.1889C100.401 27.1889 99.2625 26.9033 98.2819 26.332C97.3013 25.7563 96.5367 24.9399 95.9879 23.8828C95.4436 22.8213 95.1715 21.5618 95.1715 20.1044C95.1715 18.9844 95.3334 17.9858 95.6573 17.1087C95.9856 16.227 96.4444 15.4804 97.0337 14.8686C97.6229 14.2569 98.3089 13.7913 99.0916 13.4719C99.8742 13.1526 100.722 12.9929 101.635 12.9929C102.418 12.9929 103.147 13.1076 103.821 13.337C104.496 13.5619 105.094 13.8813 105.616 14.2951C106.142 14.7089 106.572 15.2015 106.905 15.7727C107.238 16.3395 107.451 16.9647 107.546 17.6484H104.577ZM109.814 27V16.6364H112.601V18.4446H112.709C112.898 17.8014 113.215 17.3156 113.66 16.9872C114.106 16.6544 114.618 16.4879 115.199 16.4879C115.343 16.4879 115.498 16.4969 115.664 16.5149C115.831 16.5329 115.977 16.5576 116.103 16.5891V19.1396C115.968 19.0991 115.781 19.0631 115.543 19.0316C115.304 19.0001 115.086 18.9844 114.888 18.9844C114.466 18.9844 114.088 19.0766 113.755 19.261C113.426 19.4409 113.166 19.6928 112.972 20.0167C112.783 20.3406 112.689 20.7139 112.689 21.1367V27H109.814ZM121.789 27.2024C120.741 27.2024 119.835 26.9798 119.07 26.5344C118.31 26.0846 117.723 25.4594 117.309 24.6587C116.895 23.8536 116.688 22.9202 116.688 21.8587C116.688 20.7881 116.895 19.8525 117.309 19.0518C117.723 18.2467 118.31 17.6214 119.07 17.1761C119.835 16.7263 120.741 16.5014 121.789 16.5014C122.837 16.5014 123.741 16.7263 124.501 17.1761C125.266 17.6214 125.855 18.2467 126.269 19.0518C126.683 19.8525 126.89 20.7881 126.89 21.8587C126.89 22.9202 126.683 23.8536 126.269 24.6587C125.855 25.4594 125.266 26.0846 124.501 26.5344C123.741 26.9798 122.837 27.2024 121.789 27.2024ZM121.803 24.9759C122.279 24.9759 122.677 24.8409 122.997 24.571C123.316 24.2966 123.557 23.9233 123.719 23.451C123.885 22.9787 123.968 22.4412 123.968 21.8384C123.968 21.2357 123.885 20.6982 123.719 20.2259C123.557 19.7536 123.316 19.3802 122.997 19.1058C122.677 18.8314 122.279 18.6942 121.803 18.6942C121.321 18.6942 120.916 18.8314 120.588 19.1058C120.264 19.3802 120.019 19.7536 119.853 20.2259C119.691 20.6982 119.61 21.2357 119.61 21.8384C119.61 22.4412 119.691 22.9787 119.853 23.451C120.019 23.9233 120.264 24.2966 120.588 24.571C120.916 24.8409 121.321 24.9759 121.803 24.9759ZM135.405 22.5874V16.6364H138.279V27H135.519V25.1175H135.412C135.178 25.7248 134.789 26.2128 134.244 26.5817C133.705 26.9505 133.046 27.1349 132.267 27.1349C131.575 27.1349 130.965 26.9775 130.439 26.6626C129.913 26.3478 129.501 25.9002 129.204 25.32C128.912 24.7397 128.763 24.0447 128.759 23.2351V16.6364H131.633V22.7223C131.638 23.334 131.802 23.8176 132.126 24.1729C132.45 24.5283 132.884 24.706 133.428 24.706C133.774 24.706 134.098 24.6272 134.399 24.4698C134.701 24.3079 134.944 24.0695 135.128 23.7546C135.317 23.4397 135.409 23.0507 135.405 22.5874ZM140.578 30.8864V16.6364H143.412V18.3771H143.54C143.666 18.0982 143.848 17.8149 144.087 17.527C144.33 17.2346 144.644 16.9917 145.031 16.7983C145.423 16.6004 145.908 16.5014 146.489 16.5014C147.244 16.5014 147.942 16.6993 148.58 17.0952C149.219 17.4865 149.73 18.078 150.112 18.8697C150.494 19.6568 150.685 20.6442 150.685 21.8317C150.685 22.9877 150.499 23.9638 150.125 24.7599C149.757 25.5516 149.253 26.1521 148.614 26.5614C147.98 26.9663 147.269 27.1687 146.482 27.1687C145.924 27.1687 145.45 27.0765 145.058 26.892C144.671 26.7076 144.354 26.476 144.107 26.1971C143.86 25.9137 143.671 25.6281 143.54 25.3402H143.452V30.8864H140.578ZM143.392 21.8182C143.392 22.4344 143.477 22.9719 143.648 23.4308C143.819 23.8896 144.066 24.2472 144.39 24.5036C144.714 24.7554 145.108 24.8814 145.571 24.8814C146.039 24.8814 146.435 24.7532 146.759 24.4968C147.082 24.2359 147.328 23.8761 147.494 23.4173C147.665 22.954 147.75 22.4209 147.75 21.8182C147.75 21.2199 147.667 20.6937 147.501 20.2393C147.334 19.785 147.089 19.4297 146.765 19.1733C146.441 18.9169 146.043 18.7887 145.571 18.7887C145.103 18.7887 144.707 18.9124 144.384 19.1598C144.064 19.4072 143.819 19.758 143.648 20.2124C143.477 20.6667 143.392 21.2019 143.392 21.8182ZM156.972 27V24.8949L161.891 20.3406C162.309 19.9357 162.66 19.5714 162.943 19.2475C163.231 18.9237 163.449 18.6065 163.598 18.2962C163.746 17.9813 163.82 17.6417 163.82 17.2773C163.82 16.8725 163.728 16.5239 163.544 16.2315C163.359 15.9347 163.107 15.7075 162.788 15.5501C162.469 15.3881 162.107 15.3072 161.702 15.3072C161.279 15.3072 160.91 15.3926 160.595 15.5636C160.28 15.7345 160.038 15.9796 159.867 16.299C159.696 16.6184 159.61 16.9985 159.61 17.4393H156.837C156.837 16.5352 157.042 15.7502 157.451 15.0845C157.86 14.4188 158.434 13.9038 159.172 13.5394C159.909 13.1751 160.759 12.9929 161.722 12.9929C162.712 12.9929 163.573 13.1683 164.306 13.5192C165.044 13.8655 165.617 14.3468 166.027 14.9631C166.436 15.5793 166.641 16.2855 166.641 17.0817C166.641 17.6035 166.537 18.1185 166.33 18.6268C166.128 19.1351 165.766 19.6996 165.244 20.3203C164.722 20.9366 163.987 21.6765 163.038 22.5401L161.02 24.517V24.6115H166.823V27H156.972Z" fill="#252525" />
+            <g clip-path="url(#clip0_21_14)">
+              <path d="M37.0583 8.41916H26.4698V6.23838H35.2181C31.4874 2.38912 26.2636 -0.00532749 20.4799 0.000253877C9.15797 0.0134796 -0.0112052 9.1993 1.02778e-05 20.5212C0.00530061 26.0754 2.22372 31.1078 5.81446 34.7957C5.52799 34.3758 5.32363 33.9409 5.19859 33.5266C4.99042 32.8099 4.99042 32.3004 4.96714 30.2634V20.5203H8.0223V30.5648C8.0223 31.259 7.99849 31.93 8.23047 32.5552C8.85568 34.1285 10.568 34.3142 11.5404 34.3142C12.0256 34.3142 13.2527 34.2904 14.155 33.5032C15.0574 32.6933 15.0574 31.7676 15.0574 30.4024V20.5203H18.1359V30.8195C18.1121 32.6709 18.1121 34.1984 16.3769 35.6794C14.7103 37.137 12.5584 37.276 11.448 37.276C10.4523 37.276 9.48089 37.1604 8.55427 36.8365C8.17355 36.705 7.82735 36.5435 7.51379 36.3615C11.0551 39.2645 15.5846 41.0049 20.521 41.0002C31.8429 40.9896 41.0121 31.8021 41 20.4802C40.9973 15.9693 39.5312 11.8018 37.0584 8.41916M36.1009 19.3417L34.7917 17.4791C35.2275 17.1936 36.5871 16.3043 36.5871 13.8044C36.5871 13.3854 36.5535 12.9487 36.3856 12.5297C36.0338 11.674 35.43 11.5228 35.0269 11.5228C34.2719 11.5228 34.0032 12.0426 33.852 12.4121C33.7512 12.6809 33.7346 12.7145 33.4835 13.7876L33.1811 15.2144C32.9965 15.9693 32.9124 16.3379 32.7621 16.7074C32.5436 17.244 31.8224 18.7035 29.8591 18.7035C27.6111 18.7035 26.1685 16.8082 26.1685 14.0227C26.1685 11.4724 27.4264 10.097 28.5676 9.25807L29.9263 11.0703C29.3393 11.4724 28.1645 12.2442 28.1645 14.1403C28.1645 15.332 28.702 16.3715 29.6081 16.3715C30.614 16.3715 30.8156 15.2648 31.0171 14.1907L31.2849 12.9664C31.6209 11.3717 32.275 9.1237 34.8085 9.1237C37.5268 9.1237 38.6177 11.6404 38.6177 14.1571C38.6177 14.8113 38.5505 15.5494 38.3489 16.2707C38.1137 17.0592 37.5436 18.4524 36.1009 19.3417Z" fill="#252525" />
+            </g>
+            <defs>
+              <clipPath id="clip0_21_14">
+                <rect width="41" height="41" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav container justify-content-center lg-me-auto mb-lg-0 gap-md-4">
+            <!-- History -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle font-medium" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> History </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="../../content/10-history/600-Famous-People.html">Famous People</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/10-history/100-(380BC-1950).html">Era from 380BC - 1950</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/10-history/200-(1950-1970).html">Era from 1950 - 1970</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/10-history/300-(1970-1990).html">Era from 1970 - 1990</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/10-history/400-(1990-2010).html">Era from 1990 - 2010</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/10-history/500-(2010-now).html">Era from 2010 - Now</a>
+                </li>
+              </ul>
+            </li>
+            <!-- How it works -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle font-medium" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Machine Learning </a>
+              <ul class="dropdown-menu scrollbar">
+                <li>
+                  <div class="dropdown-topic">Introduction to Neural Networks</div>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/20-machine-learning/101-Neural-Networks.html">Neural Networks</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/20-machine-learning/102-Layers.html">Layers</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/20-machine-learning/103-Activation-Functions.html">Activation Functions</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/20-machine-learning/104-Forward-Propagation.html">Forwardpropagation</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/20-machine-learning/105-Output-Layer-Functions.html">Output Layer Function</a>
+                </li>
+                <li>
+                  <div class="dropdown-topic">Training</div>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/20-machine-learning/201-learning-from-data.html">Learning from Data</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/20-machine-learning/202-cost-function.html">Cost Function</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/20-machine-learning/203-how-neural-network-learn.html">How Neural Networks learn</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/20-machine-learning/204-The-Key-Of-Convergence.html">The Key of Convergence</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/20-machine-learning/205-Types-Of-Gradient-Descent.html">Types of Gradient Descent</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/20-machine-learning/206-computing-the-gradient.html">Computing the Gradient</a>
+                </li>
+                <li>
+                  <div class="dropdown-topic">Training Techniques</div>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/20-machine-learning/301-Optimizers.html">Optimizers</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/20-machine-learning/302-Initial-Weight-Values.html">Initial weight values</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/20-machine-learning/303-Regularization.html">Regularization</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/20-machine-learning/304-Validating-Hyperparameters.html">Validating Hyperparameters</a>
+                </li>
+                <li>
+                  <div class="dropdown-topic">Convolutional neural networks</div>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/20-machine-learning/401-cnn-general.html">CNN General</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/20-machine-learning/402-convolutional-layer.html">Convolutional layer</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/20-machine-learning/403-pooling-layer.html">Pooling layer</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/20-machine-learning/404-fully-connected-layer.html">Fully Connected Layer</a>
+                </li>
+                <li>
+                  <div class="dropdown-topic">Natural Language Processing</div>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/20-machine-learning/501-introduction-to-nlp.html">Introduction to NLP</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/20-machine-learning/502-word-embeddings.html">Embeddings</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/20-machine-learning/503-types-of-nlp.html">Types of NLP</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/20-machine-learning/504-the-frontier-of-nlp.html">The Frontier of NLP</a>
+                </li>
+              </ul>
+            </li>
+            <!-- Applications -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle font-medium" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Applications </a>
+              <ul class="dropdown-menu scrollbar">
+                <li>
+                  <div class="dropdown-topic">Trading</div>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/30-applications/100-Trading-Machine_Learning.html">Trading Machine Learning</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/30-applications/101-Trading-Data_Mining.html">Trading Data Mining</a>
+                </li>
+                <li>
+                  <div class="dropdown-topic">Vehicle Automation</div>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/30-applications/200-cars.html">Cars</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/30-applications/201-planes.html">Planes</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/30-applications/202-google-maps.html">Google Maps</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/30-applications/203-traffic-ai.html">Traffic AI</a>
+                </li>
+                <li>
+                  <div class="dropdown-topic">Cybersecurity</div>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/30-applications/301-cybersecurity-pg-1.html">Cybersecurity 1</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/30-applications/301-cybersecurity-pg-2.html">Cybersecurity 2</a>
+                </li>
+                <li>
+                  <div class="dropdown-topic">Medicine</div>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/30-applications/302-medicine-pg-1.html">Medicine 1</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/30-applications/302-medicine-pg-2.html">Medicine 2</a>
+                </li>
+                <li>
+                  <div class="dropdown-topic">Factory Automation</div>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/30-applications/400-Factory_Automation.html">Factory Automation</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/30-applications/401-Quality_Control.html">Quality Control</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/30-applications/402-AMRs.html">AMR</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../../content/30-applications/403-Warehouse_Management.html">Warehouse Management</a>
+                </li>
+                <li>
+                <div class="dropdown-topic">Education</div>
+            </li>
+            <li>
+              <a class="dropdown-item" href="../../content/30-applications/500-education-learning_progress.html">Learning</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="../../content/30-applications/501-education-teaching_progress.html">Teaching</a>
+            </li>
+          </ul>
+          </li>
+          <!-- Art -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle font-medium" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Art </a>
+            <ul class="dropdown-menu">
+              <li>
+                <div class="dropdown-topic">Introduction</div>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/40-art/400-introduction.html">Introduction</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/40-art/401-history-of-ai-generated-art.html">History</a>
+              </li>
+              <li>
+                <div class="dropdown-topic">Images</div>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/40-art/410-ai-filter.html">AI Filters</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/40-art/411-ai-nft.html">AI NFT</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/40-art/412-ai-role.html">AI Role in NFTs</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/40-art/413-ai-examples.html">Examples of Photoshop AI</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/40-art/414-nft-examples.html">Examples of AI in NFTS</a>
+              </li>
+              <li>
+                <div class="dropdown-topic">Music</div>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/40-art/420-music.html">Introduction</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/40-art/421-voice-changer.html">Voice Changers</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/40-art/422-VC-&-AI.html">Voice Changers in relation with AI</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/40-art/423-music-ai-applications.html">Music Industry and AI</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/40-art/424-music-by-ai.html">Music Created by AI</a>
+              </li>
+              <li>
+                <div class="dropdown-topic">Literature</div>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/40-art/430-ai-literature.html">AI and Literature</a>
+              </li>
+              <li>
+                <div class="dropdown-topic">Videos</div>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/40-art/431-can-ai-make-movies.html">Can AI make Videos/Movies?</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/40-art/432-movies-made-by-ai.html">Movies made by AI?</a>
+              </li>
+              <li>
+                <div class="dropdown-topic">Games</div>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/40-art/440-games-intro.html">Introduction</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/40-art/441-RTX.html">RTX</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/40-art/442-DLSS.html">DLSS</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/40-art/443-games-created-by-AI.html">Games created by AI</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/40-art/444-outro-of-ai-in-games.html">Future of Games</a>
+              </li>
+            </ul>
+          </li>
+          <!-- Media -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle font-medium" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Media </a>
+            <ul class="dropdown-menu scrollbar">
+              <li>
+                <div class="dropdown-topic">Introduction</div>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/50-media/501-Media-Introduction.html">Media Introduction</a>
+              </li>
+              <li>
+              <div class="dropdown-topic">Marketing</div>
+          </li>
+          <li>
+            <a class="dropdown-item" href="../../content/50-media/502-Marketing-Data-Collection.html">Marketing Data Collection</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="../../content/50-media/504-Data-Categorization-And-Supervision.html">Data Categorisation and Supervision</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="../../content/50-media/505-Streaming-Music-Services.html">Streaming Music Services</a>
+          </li>
+          <li>
+            <div class="dropdown-topic">Political</div>
+          </li>
+          <li>
+            <a class="dropdown-item" href="../../content/50-media/506-Cambridge-Analytica.html">Cambridge Analytica</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="../../content/50-media/507-CA-Cases.html">CA Cases</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="../../content/50-media/508-SPYWARE-Pegasus.html">Spyware Pegasus</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="../../content/50-media/509-TekFog.html">Tek Fog</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="../../content/50-media/510-open-governament.html">Open Government</a>
+          </li>
+          <li>
+            <div class="dropdown-topic">Social</div>
+          </li>
+          <li>
+            <a class="dropdown-item" href="../../content/50-media/511-Instagram.html">Instagram</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="../../content/50-media/512-TikTok.html">TikTok</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="../../content/50-media/513-DIfferences.html">Differences</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="../../content/50-media/514-Youtube.html">YouTube</a>
+          </li>
+          <li>
+            <div class="dropdown-topic">Changing Traditional Media</div>
+          </li>
+          <li>
+            <a class="dropdown-item" href="../../content/50-media/515-Auto-Journalism.html">Auto Journalism</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="../../content/50-media/516-Replace-or-not.html">Replace or not?</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="../../content/50-media/517-DeepText.html">DeepText</a>
+          </li>
+          </ul>
+          </li>
+          <!-- Ethics -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle font-medium" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Ethics </a>
+            <ul class="dropdown-menu scrollbar">
+              <li>
+                <div class="dropdown-topic">Introduction</div>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/60-ethics/100-ethics-in-AI.html">Ethics in AI</a>
+              </li>
+              <li>
+                <div class="dropdown-topic">Responsible AI</div>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/60-ethics/200-Need-of-Ethics.html">Need for Ethics</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/60-ethics/201-Ethics-of-Autonomous-Weapons.html">Ethics of Autonomous Weapons</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/60-ethics/202-STANISLAV-EVGRAFOVIC-PETROV’S-CASE.html">Need for EthicsStanislav Petrov's Case</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/60-ethics/203-The-Trolley-Problem.html">The Trolley Problem</a>
+              </li>
+              <li>
+                <div class="dropdown-topic">Explainable AI</div>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/60-ethics/300-explainable-AI.html">Explainable AI Introduction</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/60-ethics/301-explainability-tools.html">Explainability Tools</a>
+              </li>
+              <li>
+                <div class="dropdown-topic">Data Sets and Algorithmic Bias</div>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/60-ethics/400-Data-sets-and-Algorithmic-Bias.html">Data Sets and Algorithmic Bias</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/60-ethics/401-Unfairness-in-Algorithm.html">Unfairness in Algorithms</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/60-ethics/402-Face-recognition.html">Face Recognition</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/60-ethics/403-COMPAS.html">COMPAS</a>
+              </li>
+              <li>
+                <div class="dropdown-topic">Misuse of AI</div>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/60-ethics/500-misuse-main.html">Misuse Introduction</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/60-ethics/501-misuse-deepfakes.html">Deepfakes</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/60-ethics/502-misuse-passwordGuessing.html">Password Guessing</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/60-ethics/503-misuse-humanImpersonation.html">Human Impersonation</a>
+              </li>
+              <li>
+                <div class="dropdown-topic">Regulations of AI</div>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/60-ethics/600-AI-law-US.html">AI Laws in the US</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/60-ethics/601-AI-EU-laws.html">AI Laws in Europe</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/60-ethics/602-AI-laws-challenges.html">Challenges with AI Laws</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="../../content/60-ethics/603-Initiatives.html">Initiatives for AI ethics</a>
+              </li>
+            </ul>
+          </li>
+          </ul>
+        </div>
+        <div class="d-none d-lg-block" style="width: 140px;"></div>
+      </div>
+    </nav>
+  </header>
+    
+        <!-- TITLE -->
+        <section class="container mt-5">
+            <div class="row">
+                <div class="md-col-8 col-11 mx-auto text-center">
+                <p class="font-black text-uppercase topic-tag">
+                      Ethics
+                </p>
+                <h2 class="font-black" style="font-size: 35px;">
+                    Explainability tools
+                </h2>
+                <p class="text-secondary mt-4">
+                    Agnese E. Zamboni &bull; 15.11.2022
+                </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- PAGE CONTENT -->
+
+        <div class="container mt-5 justify-content-center">
+            <div class="row justify-content-center">
+                <div class="col-11 col-lg-7">  
+
+                    <h3 class="fs-4 font-bold py-2 ">
+                       Explainability Techniques
+                    </h3>
+
+                    <p class="paragraph">
+                        Explainable AI can help explain the reasoning behind a Machine Learning (ML) model’s decision 
+                         <b>trained</b> using any algorithm such as <b>linear regression, random forest, 
+                        decision trees,</b> etc.
+                        <br>
+                    </p>
+
+                    <!-- PICTURE -->
+                    <div class="text-center mt-5 mx-4 mb-5">
+                        <img class="img-fluid shadow transition border rounded-4" src="../../img/60-white-box.png"
+                          alt="White Box" style="object-fit: cover;
+                              object-position: center;">
+                        <p class="rounded mx-auto fs-7 text-secondary mt-3">White Box<sup>1</sup></p>
+                      </div>
+
+                    <p class="paragraph">
+                        Some common <b>explainability techniques</b> include:
+                    </p>
+
+                    <ul>
+                        <li>
+                            <p class="paragraph">
+                                <b> Prediction Accuracy:</b>
+                                the accuracy of the prediction can be determined by running simulations and 
+                                comparing XAI output to the results in the training data set.
+                                The most popular technique used for this is 
+                                <b>Local Interpretable Model-Agnostic Explanations (LIME)</b>.<sup>2</sup>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="paragraph">
+                                <b>Traceability:</b>
+                                another key technique for accomplishing XAI. 
+                                This is achieved, for example, by limiting the way decisions can be made and 
+                                setting up a narrower scope for ML rules and features. An example of a traceability 
+                                XAI technique is <b>DeepLIFT (Deep Learning Important FeaTures)</b>, 
+                                which compares the activation of each neuron to its reference neuron
+                                and shows a traceable link between each activated neuron and even shows 
+                                dependencies between them.<sup>2</sup>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="paragraph">
+                                <b>Vizualisation:</b>
+                                building explainability features to explain model predictions in a visual way.<sup>3</sup>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="paragraph">
+                                <b>Explanation Mining:</b>
+                                using machine learning techniques for finding relevant data that 
+                                explains the prediction of an artificial intelligence algorithm.<sup>3</sup>
+
+                            </p>
+                        </li>
+                    </ul>
+
+                    <h3 class="fs-4 font-bold py-2 ">
+                        Explainability Tools
+                     </h3>
+
+                    <p class="paragraph">
+                        <b>SHapley Additive exPlanations (SHAP)</b> and <b>LIME</b> are <b>explainability tools</b>
+                        that give an explaination to the decisions made by a Machine Learning (ML) model using local interpretations.
+                    </p>
+                    <ul>
+                        <li>
+                            <p class="paragraph">
+                                <b>LIME:</b>
+                                LIME stands for Local Interpretable Model-Agnostic Explanations. 
+                                LIME is an open-source explainer that can be used to explain the 
+                                predictions of any machine learning model and has been used to explain 
+                                everything from credit scoring models to self-driving cars. 
+                                LIME works by perturbing the input data and observing how this 
+                                affects the output of the model.<sup>3</sup>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="paragraph">
+                                <b>SHAP:</b>
+                                SHAP framework is based on game theory and specifically 
+                                the Shapley values from cooperative game theory. 
+                                It combines optimal credit allocation with local explanations
+                                using the original Shapley values from game theory and their descendants.<sup>3</sup>
+                            </p>
+                        </li>
+                    </ul>
+
+                    <h3 class="fs-4 font-bold py-2 ">
+                        Examples of XAI in action
+                    </h3>
+
+                    <p class="paragraph">
+                        We are going to briefly show an example of explainability of model prediction,
+                        where the Boston housing price prediction model got trained using the XGBoost algorithm. 
+                        The explainability is achieved using SHAP (introduced above).
+                        The picture below shows what features are contributing to pushing the model 
+                        input from the base value to the model output.
+                        Features pushing the prediction higher are shown in red, those pushing 
+                        the prediction lower are in blue.<sup>3</sup>
+                    </p>
+
+                    <!-- PICTURE -->
+                    <div class="text-center mt-5 mx-4 mb-5">
+                        <img class="img-fluid shadow transition border rounded-4" src="../../img/60-SHAP-explainability.png"
+                          alt="SHAP explainabilty" style="object-fit: cover;
+                              object-position: center;">
+                        <p class="rounded mx-auto fs-7 text-secondary mt-3">SHAP explainability<sup>3</sup></p>
+                      </div>
+
+                    <h3 class="fs-4 font-bold py-2 ">
+                        Importance of Explainable Artificial Intelligence
+                    </h3>
+
+                    <p class="paragraph">
+                        The example above helps visualizing why we <b>need</b> Explainable AI.
+                        In fact it becomes easier to see how XAI can have an impact in reducing bias in AI,
+                        since it can detect if a system is behaving immorally. For example, it 
+                        becomes clear if the machine is making decisions based on
+                        a person's race, gender, or religion in situations where they shouldn't be weighed.
+                    </p>
+
+
+                    <!-- BOTTOM OF THE PAGE-->
+                    <div class="mt-5">
+                        <p class="text-secondary fs-7">Sources</p>
+                        <hr>
+                        <ol>
+                            <!-- SOURCES -->
+                            <li class="fs-7 text-secondary"><a class="text source"
+                                href="https://knowledge.dataiku.com/latest/courses/machine-learning/explainable-ai/concept-explainable-ai.html">https://knowledge.dataiku.com/latest/courses/machine-learning/explainable-ai/concept-explainable-ai.html</a>
+                            </li>
+                            <li class="fs-7 text-secondary"><a class="text source"
+                                href="https://www.ibm.com/watson/explainable-ai">https://www.ibm.com/watson/explainable-ai</a>
+                            </li>
+                            <li class="fs-7 text-secondary"><a class="text source"
+                                href="https://vitalflux.com/what-is-explainable-ai-concepts-examples/">https://vitalflux.com/what-is-explainable-ai-concepts-examples/</a>
+                            </li>
+                        </ol>
+
+                        <!-- PREV / NEXT BUTTTONS-->
+                        <div class="d-flex justify-content-between mt-6">
+                          <a href="300-explainable-AI.html" class="fs-6 topicl transition">&larr; Previous topic</a>
+                          <a href="400-Data-sets-and-Algorithmic-Bias.html" class="fs-6 topicr transition">Next topic &rarr;</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="container mx-auto mt-6 max-w-md">
+            <hr>
+            <div class="d-flex justify-content-between">
+            <p class="fs-6 text-secondary">2022 SA1 Group 2</p>
+            <address class="fs-6 text-secondary">Agnese E. Zamboni</address>
+            </div>
+        </footer>
+
+    </body>
+
+</html>
