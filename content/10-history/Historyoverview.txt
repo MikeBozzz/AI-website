@@ -1,0 +1,142 @@
+                                     History part overview
+                                      
+   1) first page(380BC-1950)-> AI history in this years, will consist 2-3 pictures
+   
+   
+   2)second page(1950-1970)-> AI history in this years, will consist 2-3 pictures  
+      
+   
+   3)third page(1970-1990)-> AI history in this years, will consist 2-3 pictures
+   
+   
+   4)fourth page(1990-2010)-> AI history in this years, will consist 2-3 pictures
+   
+   
+   5)fifth page(2010-present)-> AI history in this years, will consist 2-3 pictures
+   
+   
+   
+   
+   
+   6)sixth page-> (famous people) page with personalities(photo and name), when you hover your mouse it has
+       hover effect and when you click it send you to the next page where will be information what 
+       his or her contribution in the history of AI.
+       Page consist 3 personalities per line and the same repeat down (it will be 24 person)
+       
+       
+   7-26) seventh-??? pages->   it's another pages which consist information about the person
+       you click on -->> page with information and one picture
+       
+       
+       
+             (5 history pages + 1 page with all personalities + 24 personalities pages)
+   6 pages for each pearson, the page must not be less than a4 type paper and no bigger that a4 type paper
+       
+   
+   
+   
+   Who will do what:
+   
+     Nikita: history:                 Personalities: Cynthia Breazel, Yutaka Matsuo, Dacheng Tao,
+               (380BC-1950)=1page             Elon Mask, page with personalites=5pages      Total 6pages
+       
+       
+     Ilaria: history:                 Personalities: Donald Olding, Richard Socher, Anita Schjøll Brede
+               (1950-1970)=1page              Anna Scaife, Edward Feigenbaum=5pages   Total 6pages
+      
+                                                                         
+     Theodor: history:                Personalities: Alan Turing, Fei-Fei Li,  Rita Cucchira
+               (2010-now)=1page               Jurgen Schmidhuber, IBM(company) =5pages   Total 6pages
+   
+   
+     Adrian: history:      Personalities: Dorian Selz, Demis Hassbis, Andres Hardebring, Robin Li,
+           (1970-1990)=1page                  Claude Elwood =5pages     Total 6pages
+                    
+    
+     Taylor: history:                Personalities: Rodney Brooks, John McCarthy, Marvin Minsky
+            (1990-2010)=1page                 Yann LeCun, Ross Quillian,  =5pages  Total 6pages  
+                          
+               
+               
+And after the information you write(of couse not ctrl+C ctrl+V) add the link where you take this info  and it would be bettet, that immage what you find, save it , because then you will need to add them to the git but do not add something to the git before I say to you
+
+
+
+                      
+
+
+
+
+
+
+
+
+
+                                   How to name files and pictures
+
+
+        Files with people
+        
+For this people you do not need to find their images, it will be the same image that at the Famous-people page, you just look at the image folder and find your person. The image will be named, for example, 
+  10-Alan-Turing.(someformat)         
+
+Alan Turing            601-Alan-Turing.html
+Claude Elwood          602-Claude-Elwood.html
+Donald Olding          603-Donald-Olding.html
+Marvin Minsky          604-Marvin-Minsky.html 
+John McCarthy          605-John-McCarthy.html
+Ross Quillian          606-Ross-Quillian.html 
+Edward Feigenbaum      607-Edward-Feigenbaum.html
+Yann LeCun             608-Yann-LeCun.html 
+Rodney Brooks          609-Rodney-Brooks.html
+Yutaka Matsuo          610-Yutaka-Matsuo.html
+Robin Li               611-Robin-Li.html
+IBM(company)           612-IBM.html
+Demis Hassbis          613-Demis-Hassbis.html 
+Dorian Selz            614-Dorian-Selz.html 
+Jurgen Schmidhuber     615-Jurgen-Schmidhuber.html
+Richard Socher         616-Richard-Socher.html
+Andres Hardebring      617-Andres-Hardebring.html 
+Cynthia Breazel        618-Cynthia-Breazel.html
+Dacheng Tao            619-Dacheng-Tao.html 
+Anita Schjøll Brede    620-Anita-Schjøll-Brede.html
+Anna Scaife            621-Anna-Scaife.html
+Fei-Fei Li             622-Fei-Fei-Li.html 
+Elon Mask              623-Elon-Mask.html
+Rita Cucchira          624-Rita-Cucchira.html
+
+
+         Files with history period
+
+(380BC-1950)           100-(380BC-1950).html
+(1950-1970)            200-(1950-1970).html
+(1970-1990)            300-(1970-1990).html
+(1990-2010)            400-(1990-2010).html
+(2010-present)         500-(2010-now).html
+
+
+
+
+              Pictures
+
+ 10-(picturename).(someformat)  
+ 
+ Maybe it would be better to name something like this:
+ 
+   10-(your history period)(1 or 2 or 3).(someformat) -->>  10-1970-1990(1).jpg ;  
+          and if you have two, three pictures    -->> 10-1970-1990(2).jpg 
+          
+          
+ 
+ 
+ 
+  You can start doing your html pages
+  (do not make  other folder, just add your html file to the history folder and your pictures to the picture folder)
+  
+  
+  
+  
+  
+  Pages must be finish by Tueday afternoon
+  If you need help with git or html, you can contact me        
+                         
